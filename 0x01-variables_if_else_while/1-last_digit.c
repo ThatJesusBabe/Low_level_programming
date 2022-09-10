@@ -2,8 +2,7 @@
 #include <stdlid.h>
 #include <time.h>
 /**
-* main - Entry point
-* Description: checks on the last digit of the assigned var
+* main - Random numbers
 * Return: always 0 (success)
 */
 int main(void)
