@@ -2,16 +2,22 @@
 #include <unistd.h>
 /**
  * main - Entry point
- * Description: prints lowercase alphabets in reverse
+ * Description: Print base 16 numbers
  * Return: Always 0 (success)
  */
 int main(void)
 {
-	int a;
+	char c;
+	char d = '0';
 
-	for (a = 'z'; a >= 'a'; a--)
+	while (d <= '9')
 	{
-		putchar(a);
+		putchar(d);
+		d++;
+	}
+	for (c = 'a'; c <= 'f'; c++)
+	{
+		putchar(c);
 	}
 	putchar('\n');
 	return (0);
