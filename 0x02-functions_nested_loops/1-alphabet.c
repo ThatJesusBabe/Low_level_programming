@@ -14,12 +14,5 @@ char ch;
 for (ch = 'a'; ch <= 'z'; ch++)
 _putchar(ch);
 _putchar('\n');
-}
 
-int main(void)
-{
-print_alphabet();
-_putchar('\n');
-return (0);
 }
-
