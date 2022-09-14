@@ -23,7 +23,7 @@ return (length);
 
 /**
 * main - Entry point
-* Description: prints the first 98 Fibonacci numbers starting with 1 and 2 followed by a new
+* Description: prints the first
 * Return: Always 0 (Success)
 */
 
