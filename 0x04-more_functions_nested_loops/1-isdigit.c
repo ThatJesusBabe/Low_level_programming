@@ -1,10 +1,10 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _isdigit - check the code for Holberton School students.
- * @c: characters
- * Return: 1 and 0
- */
+* _isdigit - check the code for Holberton School students.
+* @c: characters
+* Return: 1 and 0
+*/
 
 int _isdigit(int c)
 {
