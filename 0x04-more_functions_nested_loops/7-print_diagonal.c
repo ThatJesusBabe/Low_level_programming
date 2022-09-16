@@ -4,29 +4,28 @@
  * print_diagonal - print a diagonal line
  * @n: is the number of times the \ character
  * should be printed
+ * Return: Always 0
  */
 
 void print_diagonal(int n)
-
 {
+int i, j;
 
-	int diag, diag_line;
-
-	if (n <= 0)
-	{
-	_putchar('\n');
-	}
-	else
-	{
-		for (diag = 1; diag <= n; ++diag)
-		{
-			for (diag_line = 1; diag_line <= diag; ++diag_line)
-			{
-				_putchar(' ');
-			}
-			_putchar('\\'); /*is equal to '/' char*/
-			_putchar('\n');
-		}
-	}
-	return;
+if (n > 0)
+{
+for (i = 0; i < n; i++)
+{
+for (j = 0; j < i; j++)
+{
+_putchar(' ');
+}
+_putchar('\\');
+_putchar('\n');
+}
+}
+else
+{
+_putchar('\n');
+}
+return;
 }
