@@ -8,20 +8,13 @@
 
 void print_most_numbers(void)
 {
-	int a = 0;
+int i;
 
-	while (a <= 9)
-	{
-		if (a == 2  && a == 4)
-		{
-			continue;
-		}
-		else
-		{
-			_putchar(a);
-		}
-		a++;
-	}
-	
-	_putchar('\n');
+for (i = 0; i <= 9; i++)
+{
+if (i != 2 && i != 4)
+_putchar('0' + i);
+}
+_putchar('\n');
+return;
 }
