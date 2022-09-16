@@ -2,13 +2,13 @@
 
 /**
 * _isdigit - check the code for Holberton School students.
-* @c: characters
-* Return: 1 and 0
+* @c: character
+* Return: 1 if tru and 0if false
 */
 
 int _isdigit(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
