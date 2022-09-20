@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * rev_string - function that reverses a string
- * @s: the used string to beb reversed
- * Return: zero
- */
+* rev_string - function that reverses a string
+* @s: the used string to beb reversed
+* Return: zero
+*/
 
 void rev_string(char *s)
 {
-        int len, i, half;
+	int len, i, half;
 	char temp;
 
 	for (len = 0; s[len] != '\0'; len++)
