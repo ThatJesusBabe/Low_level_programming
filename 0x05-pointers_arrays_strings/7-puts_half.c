@@ -1,12 +1,21 @@
-#include "main.h"                               
+#include "main.h"
+
 /**
  * puts_half - function that prints half of a string
+ * @str: stores the input
+ * Return: zero
  */
 
 void puts_half(char *str)
 {
-        char str[];
-        int *p;
+	int i;
 
-        *p = 98;
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	i++;
+	for (i /= 2; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
 }
