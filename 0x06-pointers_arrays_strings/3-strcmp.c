@@ -1,22 +1,24 @@
 #include "main.h"
 
 /**
-* _strspn -search n display length
-* @s: stores the input
-* @accept: source
-* Return: comp
+* _strcmp - compare string values
+* @s1: stores the input
+* @s2: input value
+* Return: s1[i] - s2[i]
 */
 
-unsigned int _strspn(char *s, char *accept)
+int _strcmp(char *s1, char *s2)
 {
-	unsigned int i, j;
+	int i;
 
-	for (i = 0; i < s[i] != '\0'; i++)
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		for (j = 0; i < accept[j] != '\0'; j++)
+		if (s1[i] != '\0' && s2[i] != '\0')
 		{
-			if (*s == *accept)
-			return (accept[j]);
+			return (s1[i] != s2[i]);
 		}
+		i++;
 	}
+	return (0);
 }
