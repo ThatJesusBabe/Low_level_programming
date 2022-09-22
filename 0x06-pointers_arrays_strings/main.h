@@ -1,11 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* icluding the standard liberary*/
-
-#include <stdio.h>
-#include <unistd.h>
-
 /* Adding the prototype functions*/
 
 int _putchar(char c);
