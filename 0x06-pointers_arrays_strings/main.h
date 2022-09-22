@@ -4,6 +4,7 @@
 /* icluding the standard liberary*/
 
 #include <stdio.h>
+#include <unistd.h>
 
 /* Adding the prototype functions*/
 
