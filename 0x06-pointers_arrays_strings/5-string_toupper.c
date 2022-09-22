@@ -18,5 +18,5 @@ s[i] = s[i] - 32;
 }
 i++;
 }
-return (s)
+return (s);
 }
