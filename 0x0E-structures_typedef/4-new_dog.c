@@ -1,79 +1,49 @@
 #include "dog.h"
+#include <stdio.h>
 #include <stdlib.h>
 
-int _strlen(char *str);
-char *_strcopy(char *dest, char *src);
-dog_t *new_dog(char *name, float age, char *owner);
-
 /**
- * _strlen - Finds the length of a string.
- * @str: The string to be measured.
- * Return: The length of the string.
- */
-
-int _strlen(char *str)
-{
-	int len = 0;
-
-	while (*str++)
-		len++;
-	return (len);
-
-}
-
-/**
- * _strcopy - Copies a string pointed to by src, including the
- * terminating null byte, to a buffer pointed to by dest.
- * @dest: The buffer storing the string copy.
- * @src: The source string.
- * Return: The pointer to dest.
- */
-
-char *_strcopy(char *dest, char *src)
-{
-	int index = 0;
-
-	for (index = 0; src[index]; index++)
-		dest[index] = src[index];
-	dest[index] = '\0';
-	return (dest);
-}
-
-/**
- * new_dog - Creates a new dog.
- * @name: The name of the dog.
- * @age: The age of the dog.
- * @owner: The owner of the dog.
- * Return: The new struct dog.
+ * new_dog - check the code for Holberton School students.
+ * @name: naming
+ * @age: age number
+ * @owner: ownership
+ * Return: Always 0.
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *doggo;
+int i = 0, j = 0, k;
 
-	if (name == NULL || age < 0 || owner == NULL)
-		return (NULL);
-
-	doggo = malloc(sizeof(dog_t));
-	if (doggo == NULL)
-		return (NULL);
-
-	doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (doggo->name == NULL)
-	{
-		free(doggo);
-		return (NULL);
-	}
-	doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (doggo->owner == NULL)
-	{
-		free(doggo->name);
-		free(doggo);
-		return (NULL);
-	}
-	doggo->name = _strcopy(doggo->name, name);
-	doggo->age = age;
-	doggo->owner = _strcopy(doggo->owner, owner);
-
-	return (doggo);
+dog_t *d;
+while (name[i] != '\0')
+i++;
+while (owner[j] != '\0')
+j++;
+d = malloc(sizeof(dog_t));
+if (d == NULL)
+{
+free(d);
+return (NULL);
+}
+d->name = malloc(i *sizeof(d->name));
+if (d->name == NULL)
+{
+free(d->name);
+free(d);
+return (NULL);
+}
+for (k = 0; k <= i; k++)
+d->name[k] = name[k];
+d->age = age;
+d->owner = malloc(j *sizeof(d->owner));
+if (d->owner == NULL)
+{
+free(d->owner);
+free(d->name);
+free(d);
+return (NULL);
+}
+for (k = 0; k <= j; k++)
+d->owner[k] = owner[k];
+return (d);
 }
