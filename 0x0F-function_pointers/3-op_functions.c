@@ -9,8 +9,8 @@
 
 /**
  * op_add - adds two integers
- * @a: the first integer
- * @b: the second integer
+ * @a : the first integer
+ * @b : the second integer
  * Return: the sum of @a and @b.
  */
 
