@@ -1,19 +1,14 @@
-/**
- * functions that adds, subtracts, multiplies, divides and computes remainders,
- * respectively.
- */
-
+/*This file should contain the 5 following functions*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
 
 /**
- * op_add -  returns the sum of a and b
- * @a : integer variable
- * @b : int variable
- * Return : sum of a and b
+ * op_add - Prints addition of numbers.
+ * @a : The integer argument.
+ * @b : An interger argument.
+ * Return: sum of a and b.
  */
- 
 
 int op_add(int a, int b)
 {
@@ -43,14 +38,12 @@ int op_mul(int a, int b)
 {
 	return (a * b);
 }
-
 /**
  * op_div - divides an integer by another integer
  * @a: the dividend (the integer to be divided)
  * @b: the divisor
  * Return: the quotient of @a and @b.
  */
-
 int op_div(int a, int b)
 {
 	if (b == 0)
@@ -60,14 +53,12 @@ int op_div(int a, int b)
 	}
 	return (a / b);
 }
-
 /**
  * op_mod - computes the remainder from the division of @a by @b
  * @a: the dividend (the integer that is divided)
  * @b: the divisor (the integer that divides
  * Return: the remainder from @a divided by @b.
  */
-
 int op_mod(int a, int b)
 {
 	if (b == 0)
