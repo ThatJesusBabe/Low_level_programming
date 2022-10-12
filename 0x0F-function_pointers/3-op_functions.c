@@ -6,12 +6,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
+
 /**
  * op_add -  returns the sum of a and b
- * @ : integer variable
- * @ : int variable
+ * @a : integer variable
+ * @b : int variable
  * Return : sum of a and b
  */
+ 
 
 int op_add(int a, int b)
 {
