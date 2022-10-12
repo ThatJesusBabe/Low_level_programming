@@ -1,20 +1,28 @@
-#include "dog.h"
-#include <stdlib.h>
+#include "function_pointers.h"
 
 /**
- * free_dog - check the code for Holberton School students.
- * @d: decimal
- * Return: Always 0.
- */
+  * int_index - that searches for an integer.
+  * @array: integer array
+  * @size: integer
+  * @cmp: pointer to function
+  * Return: -1 if size <= 0
+  */
 
-void free_dog(dog_t *d)
+int int_index(int *array, int size, int (*cmp)(int))
 {
-if (d)
-{
-if (d->name)
-free(d->name);
-if (d->owner)
-free(d->owner);
-free(d);
-}
+	int i = 0;
+
+	if (size > 0)
+	{
+		if (array != NULL && cmp != NULL)
+		{
+			while (i < size)
+			{
+				if (cmp(array[i]))
+					return (i);
+				i++;
+			}
+		}
+	}
+	return (-1);
 }
