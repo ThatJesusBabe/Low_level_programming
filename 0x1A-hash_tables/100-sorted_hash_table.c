@@ -77,27 +77,27 @@ void add_to_sorted_list(shash_table_t *table, shash_node_t *node)
 		table->shead = table->stail = node;
 		return;
 	}
-OBOBOB	tmp = table->shead;
+	tmp = table->shead;
 	while (tmp != NULL)
-OBOBOBOBOBOB	{
+	{
 		if (strcmp(node->key, tmp->key) < 0)
-OBOBOB		{
+		{
 			node->snext = tmp;
-OBOBOB			node->sprev = tmp->sprev;
+			node->sprev = tmp->sprev;
 			tmp->sprev = node;
-OBOBOB			if (node->sprev != NULL)
+			if (node->sprev != NULL)
 				node->sprev->snext = node;
 			else
 				table->shead = node;
 			return;
-OBOBOB		}
+		}
 		tmp = tmp->snext;
 	}
 	node->sprev = table->stail;
 	table->stail->snext = node;
 	table->stail = node;
 }
-OBOBOB
+
 /**
  * shash_table_set - sets a key to a value in the hash table
  * @ht: sorted hash table
